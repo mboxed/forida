@@ -1,0 +1,315 @@
+DATABASE.lexicon = `
+HOME
+  BREF : Welcome to {(link "About" "Forida")}.
+  ICON : M150,60 A90,90 0 0,1 240,150 A-90,90 0 0,1 150,240 A-90,-90 0 0,1 60,150 A90,-90 0 0,1 150,60 Z
+  ETCS
+    & This wiki provides documentation and narrative context for the various {(link "Audio")}, {(link "Visual")} and {(link "Research")} projects of developer {(link "M")}.
+  BODY
+    & {(link "Forida")}: to grow.
+    & The ultimate goal of {(bold "Forida")} is to ensure that my personal, spiritual, and intellectual growth is tracked beautifully and easily.
+    λ (wrap (echo (template (match (table "lexicon") (uniq (attribute (table "horaire") "term"))) SPAN)) "ul" "tidy col3")
+
+RANDOM
+  UNDE : Home
+  BREF : Welcome to the redirection services.
+  TAGS : hidden
+  BODY
+    & Sending you to a random page, {(bold "please hold")}...
+    λ (REDIRECT (random (keys (value (Ø "database") "index"))))
+
+AUDIO
+  UNDE : Home
+  TAGS : portal
+  BREF : The {(link "Audio")} portal hosts various soundtrack, records and live projects.
+  BODY
+    & Welcome to the {(bold "Audio Portal")}.
+    λ (echo (template :children INDEX))
+    @ Music is the space between the notes.
+
+VISUAL
+  UNDE : Home
+  TAGS : portal
+  BREF : The {(link "Visual")} hosts design and interaction projects.
+  ICON : M75,210 L75,210 L225,210 M135.5,55 L135.5,55 L60.5,185 M239.5,185 L239.5,185 L164.5,55
+  BODY
+    & Welcome to the {(bold "Visual Portal")}.
+    λ (echo (template :children INDEX))
+
+RESEARCH
+  UNDE : Home
+  TAGS : portal
+  ICON : M60,240 a30,-30 0 0,1 30,-30 l150,0 M90,195 a30,-30 0 0,1 30,-30 l90,0 M120,150 a30,-30 0 0,1 30,-30 l30,0 M195,120 l45,0 M225,165 l15,0 M150,105 a30,-30 0 0,1 30,-30 l60,0
+  BREF : The {(link "Research")} hosts philosophy and linguistics projects.
+  BODY
+    & Welcome to the {(bold "Research Portal")}.
+    λ (echo (template :children INDEX))
+
+BENCHMARK
+  UNDE : Notebook
+  BREF : The Benchmark testing tool.
+  BODY
+    * Table
+    | normal
+    | {(link "Home")}
+    | {(link "Home" "local")}
+    | {(link "https://github.com/")}
+    | {(link "https://github.com/" "external")}
+    | {(bold "bold")}
+    | {(ital "italic")}
+    | {(bold (link "Home" "bold link"))}
+    * List
+    - normal
+    - {(link "Home")}
+    - {(link "Home" "local")}
+    - {(link "https://github.com/")}
+    - {(link "https://github.com/" "external")}
+    - {(bold "bold")}
+    - {(ital "italic")}
+    - {(bold (link "Home" "bold link"))}
+    * Paragraph
+    & normal<br />{(link "Home")}<br />{(link "Home" "local")}<br />{(link "https://github.com/")}<br />{(link "https://github.com/" "external")}<br />{(bold "bold")}<br />{(ital "italic")}<br />{(bold (link "Home" "bold link"))}
+    * Code
+    # normal
+    # {(link "Home")}
+    # {(link "Home" "local")}
+    # {(link "https://github.com/")}
+    # {(link "https://github.com/" "external")}
+    # {(bold "bold")}
+    # {(ital "italic")}
+    # {(bold (link "Home" "bold link"))}
+
+TRACKER
+  UNDE : Horaire
+  ICON : M150,90 A45,45 0 0,1 195,135 A-45,45 0 0,1 150,180 A-45,-45 0 0,1 105,135 A45,-45 0 0,1 150,90 M180,135 A45,45 0 0,1 225,180 A-45,45 0 0,1 180,225 A-45,-45 0 0,1 135,180 A45,-45 0 0,1 180,135 M120,135 A45,45 0 0,1 165,180 A-45,45 0 0,1 120,225 A-45,-45 0 0,1 75,180 A45,-45 0 0,1 120,135
+  VIEW : Tracker
+  LOOK : Noir
+  ALTS : issues
+  BREF : The {(link "Tracker")} shows {(bold "issues and balance")}.
+  BODY
+    & TODO.
+  LINK
+    RSS Feed : https://mboxed.github.io/forida/links/rss.xml
+
+JOURNAL
+  UNDE : Horaire
+  ICON : M60,90 L60,90 L210,90 M60,120 L60,120 L180,120 M210,120 L210,120 L240,120 M60,150 L60,150 L150,150 M180,150 L180,150 L240,150 M60,180 L60,180 L120,180 M150,180 L150,180 L240,180 M60,210 L60,210 L90,210 M120,210 L120,210 L240,210 M90,240 L90,240 L240,240
+  VIEW : Journal
+  LOOK : Noir
+  ALTS : Now Blog Diary
+  BREF : The {(link "Journal")} shows {(bold "recent activity")}.
+  BODY
+    & TODO.
+  LINK
+    RSS Feed : hhttps://mboxed.github.io/forida/links/rss.xml
+
+CALENDAR
+  UNDE : Horaire
+  ALTS : 2012 2013 2014 2015 2016 2017 2018 2019
+  ICON : M60,60 L60,60 L240,60 L240,240 L60,240 Z M60,120 L60,120 L240,120 M120,120 L120,120 L120,240 M120,180 L120,180 L240,180 M180,180 L180,180 L180,240
+  VIEW : Calendar
+  LOOK : Noir
+  BREF : The {(link "Calendar")} shows {(bold "upcoming events")}.
+  BODY
+    & TODO.
+  LINK
+    RSS Feed : https://mboxed.github.io/forida/links/rss.xml
+
+ABOUT
+  UNDE : Forida
+  BREF : Learn more {(link "About")} this site.
+  BODY
+    & {(bold "Forida")} is a {(link "Oscean")} implementation, drawing from Devine Lu Linvega's work and system.
+    & The aim of this project is to build a form of {(bold "personal assistant")} to help with the management of a vast repository of {(bold "recorded statistics")} which presently includes {(count (table "horaire"))} daily logs, recorded on {(count (keys (table "lexicon")))} projects, spanning over {(count (keys (value (Ø "database") "index")))} topics.
+    & {(link "Oscean")} is designed to be fully static, and operate without the need for a localhost, nor a build process. — To be flexible as so to adapt to my needs as I change, and to technology as it evolves, while remaining maintainable by not only myself, but others.
+    & Each part of this project should aim to persist across technological {(bold "Long Term")}, not one part of it should be prebuilt, precompiled, or minified — Every method should be {(bold "specific")}, {(bold "unobfuscated")}, and each one carefully chosen against general-purpose libraries, frameworks or wasteful foreign entities.
+    λ (wrap (echo (template (match (table "lexicon") ("riven" "oscean" "neralie" "arvelie" "indental" "tablatal" "runic" "heol")) LIST)) "ul" "bullet")
+    & Using this tool should be {(bold "frictionless and undisruptive")}, its formats and subsequent products versionable, re-purposable, interpretable and text-editable. Only through {(bold "open sources, open standards, human-readable formats")} and their independencies, might they survive this fleeting age of self-destructing informatics.
+    & These attributes should not only be {(bold "perceptible in its design")}, <br />but deeply {(bold "rooted in its code")}.
+    λ (echo (template :diaries PHOTO))
+    λ (echo :children)
+    @ Consider a future device, a sort of mechanized private library in which an individual stores all his books, records, and communications, and which may be consulted with exceeding speed and flexibility. It is an enlarged intimate supplement to his memory. | As We May Think | Vannevar Bush | https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/
+  LINK
+    Source Files : https://github.com/XXIIVV/Oscean
+    RSS Feed : https://mboxed.github.io/forida/links/rss.xml
+    RSS Validation : https://validator.w3.org/feed/check.cgi?url=https%3A//mboxed.github.io/forida/links/rss.xml
+    ActivityPub : https://bots.tinysubversions.com/u/neauoire/
+    Static Site : https://mboxed.github.io/forida/static.html
+    Riven Graph : https://mboxed.github.io/forida/riven.html
+
+LICENSE
+  UNDE : About
+  BREF : The {(link "License")} for {(bold "code and assets")}.
+  BODY
+    & The license applies to all the {(bold "documented projects, the projects themselves and their assets")}.
+    & The {(link "http://github.com/XXIIVV/Oscean" "platform code")} is under the {(code "MIT License")}.<br />The {(link "https://creativecommons.org/licenses/by-nc-sa/4.0/" "media and text content")} is under the {(code "BY-NC-SA 4.0 License")}.
+    # You are free to<br /><br />
+    # - <b>Share</b>: copy and redistribute the material in any medium or format.
+    # - <b>Adapt</b>: remix, transform, and build upon the material.<br /><br />
+    # Under the following terms<br /><br />
+    # - <b>Attribution</b>: You must give appropriate credit.
+    # - <b>NonCommercial</b>: You may not use the material for commercial purposes.
+    # - <b>ShareAlike</b>: You must distribute your contributions under the same license.
+    & If you have any <b>question or feedback</b>, please submit a {(link "https://github.com/XXIIVV/Oscean/issues/new" "bug report")}.
+
+HORAIRE
+  UNDE : Forida
+  BREF : {(link "Horaire")} is a {(bold "time-tracking tool")}.
+  ICON : M60,60 L60,60 L240,60 L240,240 L60,240 Z M60,120 L60,120 L240,120 M120,120 L120,120 L120,240 M120,180 L120,180 L240,180 M180,180 L180,180 L180,240
+  BODY
+    & Daily productivity logs are recorded at the {(link "Routine" "end of each day")}, adding {(bold "valuable data")} to projects.
+    & {(bold "Horaire")} is the time-tracking engine behind the {(link "Oscean")} wiki engine, designed to record and host human-readable {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/database/horaire.tbtl" "daily logs")} that can be easily parsed into {(link "Tracker" "infographics")}. A log entry contains 3 values, effectively positioning the entry in a 3 dimensional graph.
+    - The {(bold "Sector")}({(ital "Sh")}), either {(link "Audio")}, {(link "Visual")}, {(link "Research")}, or {{link "Physical"}}, is the general sector of the task.
+    - The {(bold "Concrete Hour")}({(ital "Ch")}) represents a value of concrete output, or index of progress toward the release of a project. It is also a vague indicator of a log's task type ranging from an introverted task, to an extraverted one.
+    - The {(bold "Focus Hour")}({(ital "Fh")}) is an index of attention for the day's task — where 1 indicates that no time was invested in the task, and 9 indicates that all available time was invested in the task.
+    & A {(bold "task name")} can be generated from the intersection of the {(bold "Sector")}({(ital "Sh")}), and of the {(bold "Concrete Hour")}({(ital "Ch")}). For instance, the {(code "238")} encode, can be converted into the {(code (task 238))} task.
+    | 1* | {(bold "Audio")}    | 2* | {(bold "Visual")}   | 3* | {(bold "Research")} | 4* | {(bold "Physical")}
+    | 10 | {(task 10)} | 20 | {(task 20)} | 30 | {(task 30)} | 40 | {(task 40)}
+    | 11 | {(task 11)} | 21 | {(task 21)} | 31 | {(task 31)} | 41 | {(task 41)}
+    | 12 | {(task 12)} | 22 | {(task 22)} | 32 | {(task 32)} | 42 | {(task 42)}
+    | 13 | {(task 13)} | 23 | {(task 23)} | 33 | {(task 33)} | 43 | {(task 43)}
+    | 14 | {(task 14)} | 24 | {(task 24)} | 34 | {(task 34)} | 44 | {(task 44)}
+    | 15 | {(task 15)} | 25 | {(task 25)} | 35 | {(task 35)} | 45 | {(task 45)}
+    | 16 | {(task 16)} | 26 | {(task 26)} | 36 | {(task 36)} | 46 | {(task 46)}
+    | 17 | {(task 17)} | 27 | {(task 27)} | 37 | {(task 37)} | 47 | {(task 47)}
+    | 18 | {(task 18)} | 28 | {(task 28)} | 38 | {(task 38)} | 48 | {(task 48)}
+    | 19 | {(task 19)} | 29 | {(task 29)} | 39 | {(task 39)} | 49 | {(task 49)}
+    & You can learn more about the {(link "Oscean" "related tools")}, and {(link "About" "related projects")}, to the entire {(link "Nataniev")} ecosystem. For additional questions, contact {(link "Devine Lu Linvega")}
+    @ <b>Effectiveness</b>, is doing the right thing.<br><b>Efficiency</b>, is doing it the right way.
+  LINK
+    View Database : https://github.com/XXIIVV/Oscean/blob/master/scripts/database/horaire.tbtl
+
+SOFTWARE
+  UNDE : Research
+  TAGS : portal
+  BREF : The {(link "Software" "Software Portal")} is a collection of interactive applications.
+  ICON : M90.0,90.0 L90.0,90.0 L150.0,150.0 L90.0,210.0 M210.0,90.0 L210.0,90.0 L210.0,210.0
+  BODY
+    & The {(bold "Software")} archive is a collection of {(bold "Free & Open-source")} projects.
+    & These projects were made possible by the help of countless developers who fixed issues, submitted pull requests and spent time improving the code.
+    λ (echo (template :children INDEX))
+
+FORIDA
+  UNDE : Software
+  TAGS : portal host
+  BREF : {(link "Forida")} is a set of notes.
+  ICON : M120,300 A30,180 0 0,1 150,120 A120,60 0 0,1 30,60 M210,300 A30,180 0 0,0 180,120 A120,60 0 0,0 300,60 M165,300 L165,300 L165,120 A90,60 0 0,1 75,60 M165,120 A90,60 0 0,0 255,60 M165,120 A30,60 0 0,1 135,60 M165,120 A30,60 0 0,0 195,60
+  BODY
+    & {(bold "Forida")} is a set of notes, using the {(link "Oscean")} framework.
+    λ (echo (template :children INDEX))
+
+M
+  TAGS : hidden
+  BREF : {(link "M")} is a programmer, linguist, and amateur musician.
+  ICON : M60,255 L255,255 L255,255 M60,255 L60,255 L60,255 L60,60 L255,60 L255,255 L60,255 M120,60 L120,60 L120,255 M195,255 L195,255 L195,60 M255,135 L60,135 M120,135 L120,135 L195,135 L165,255 L150,255 L120,135 M150,255 L150,255 L120,60 L195,60 L165,255 L150,255 
+  ALTS : Profile M Me
+  BODY
+    & {(bold "M")} is a human being with a lot of interests, and few talents.
+
+OSCEAN
+  UNDE : Forida
+  TAGS : host
+  BREF : {(link "Oscean")} is a flat-file {(bold "wiki engine")}.
+  BODY
+    & {(bold "Oscean")} is a fully static publishing platform created to work in the P2P space.
+    & This wiki engine has grown into a collection of tools, including the serverless flow-based framework {(link "Riven")}, and the database formats {(link "Indental")} & {(link "Tablatal")}. The main templating and inline-scripting language is a flavor of {(link "https://en.wikipedia.org/wiki/Lisp_(programming_language)" "LISP")}, called {(link "Heol")}.
+    & The following {(bold "example")} shows the content of an {(link "Indental")} file, with a body templated in {(link "Runic")}, which includes a paragraph with a bold link declared in {(link "Heol")}.
+    # <comment># lexicon.ndtl</comment>
+    # HOME
+    # &nbsp;&nbsp;BREF &#58; A basic term.
+    # &nbsp;&nbsp;TAGS &#58; diary gallery
+    # &nbsp;&nbsp;BODY
+    # &nbsp;&nbsp;&nbsp;&nbsp;& Foo &#123;(bold (link "sources"))&#125;.
+    # &nbsp;&nbsp;&nbsp;&nbsp;λ (echo :children)
+    λ (echo :children)
+  LINK
+    Github : https://github.com/XXIIVV/Oscean
+
+RIVEN
+  UNDE : Oscean
+  BREF : {(link "Riven")} is a {(bold "flow-based framework")}.
+  ICON : M45,60 L45,60 L255,60 M45,240 L45,240 L255,240 M60,60 L60,60 L60,240 M240,60 L240,60 L240,240 M150,60 L150,60 L60,150 L150,240
+  BODY
+    & {(bold "Riven")} handles the creation of nodes and the communication of signals between them.
+    & Its latest incarnation exists at the core of {(link "Oscean")}.
+    # Ø("query").create({x:2,y:2},QueryNode) <comment># Create a node</comment>
+    # Ø("query").connect("model") <comment># Connect</comment>
+    # Ø("query").send(true) <comment># Send a message to the model node.</comment>
+    & The graph that presently serves this page can be viewed {(link "http://mboxed.github.io/forida/riven.html" "here")}. This project is not meant to be an optimial way of building web applications, but a mere experimental framework to toy with the concepts of {(link "https://en.wikipedia.org/wiki/Flow-based_programming" "flow-based programming")}.
+    λ (echo (template :diaries PHOTO))
+  LINK
+    Github : https://github.com/XXIIVV/Riven
+    
+INDENTAL
+  UNDE : Oscean
+  BREF : {(link "Indental")} is a {(bold "dictionary format")}.
+  BODY
+    & {(bold "Indental")} is a character sensitive dictionary database format.
+    & The {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/indental.js" "parser")} is a mere 50 lines, and allows for human-readable data structures for static sites such as {(link "Oscean")}, also see {(link "Tablatal")}.
+    # NAME
+    # &nbsp;&nbsp;KEY &#58; VALUE
+    # &nbsp;&nbsp;LIST
+    # &nbsp;&nbsp;&nbsp;&nbsp;ITEM1
+    # &nbsp;&nbsp;&nbsp;&nbsp;ITEM2
+    # <comment>Or, &#123;NAME:&#123;KEY:VALUE,LIST:[ITEM1,ITEM2])&#125;</comment>
+  LINK
+    Github : https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/indental.js
+    Syntax : https://github.com/csmccaleb/Tome
+
+TABLATAL
+  UNDE : Oscean
+  BREF : {(link "Tablatal")} is a {(bold "collection format")}.
+  BODY
+    & {(bold "Tablatal")} is a space sensitive list database format, for fields of predictible length.
+    & The {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/tablatal.js" "parser")} is 40 lines long, and allows for human-readable data structures for static sites such as {(link "Oscean")}, also see {(link "Indental")}.
+    # NAME    AGE   COLOR
+    # Erica   12    Opal
+    # Alex    23    Cyan
+    # Nike    34    Red
+    # Ruca    45    Grey
+    # <comment>Or, [&#123;name:Erica,Age:12,Color:Blue&#125;,&#123;name:Alex,Age..&#125;</comment>
+  LINK
+    Github : https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/tablatal.js
+
+RUNIC
+  UNDE : Oscean
+  BREF : {(link "Runic")} is a {(bold "templating format")}.
+  BODY
+    & {(bold "Runic")} is a first order templating language operating on arrays of strings
+    & Where each one is prefixed by a rune, giving a sense of the data being handled. Have a look at the {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/database/lexicon.ndtl" "Oscean Lexicon")} to better understand its applications.
+    # * Header
+    # & Paragraph
+    # - List Element 1
+    # - List Element 2
+    # | table | row1
+    # | table | row2
+    # # <comment>-- CODE BLOCK</comment>
+    # > <comment>-- HTML BLOCK</comment>
+    # λ <comment>-- {(link "HEOL")} BLOCK</comment>
+  LINK
+    Github : https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/runic.js
+    Syntax : https://github.com/csmccaleb/Tome
+
+HEOL
+  UNDE : Oscean
+  BREF : {(link "Heol")} is a {(bold "scripting language")}.
+  BODY
+    & {(bold "Heol")} is an inline scripting library that allows templating and dynamic content to the wiki pages. 
+    # (link "home")                            {(link "home")}
+    # (link "home" "local")                    {(link "home" "local")}
+    # (link "https://github.com/")             {(link "https://github.com/")}
+    # (link "https://github.com/" "external")  {(link "https://github.com/" "external")}
+    # (bold "bold")                            {(bold "bold")}
+    # (ital "italic")                          {(ital "italic")}
+    # (bold (link "home" "bold link"))         {(bold (link "home" "bold link"))}
+  LINK
+    Github : https://github.com/XXIIVV/Oscean/blob/master/scripts/lib/heol.js
+
+TAXON
+  UNDE : Research
+  BREF : {(link "Taxon")} is a project catalouging the taxonomy of creatures and things.
+  ICON : M60,120 L60,120 L120,120 M60,150 L60,150 L150,150 M60,180 L60,180 L180,180 M60,60 L60,60 L60,240 L60,240 M60,210 L60,210 L195,210 M60,240 L60,240 L210,240 M60,90 L60,90 L90,90
+  BODY
+    & Welcome to Taxon.
+    & There are currently {(count (table "taxon"))} entries:
+    λ (echo (table "taxon"))
+    `

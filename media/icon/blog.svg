@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1" width="360px" height="360px" style="fill: none; width: 360px; height: 360px;">
+    <path d="" style="stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(204, 204, 204); fill: none;"/>
+    <path d="" style="stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(153, 153, 153); fill: none;"/>
+    <path d="M15,345 L15,345 L15,345 L15,15 L345,15 L345,345 L15,345 M60,240 L60,240 L60,120 L300,240 L300,120 M180,240 L180,240 L180,120 M60,90 L60,90 L300,90 M60,270 L60,270 L300,270 " style="stroke-width: 18; stroke-linecap: butt; stroke-linejoin: round; stroke: rgb(0, 0, 0); fill: none;"/>
+</svg>

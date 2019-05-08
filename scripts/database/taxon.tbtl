@@ -1,0 +1,5 @@
+DATABASE.taxon = `
+NAME                                  SPECIES              GENUS              FAMILY              ORDER               CLASS              PHYLUM              KINGDOM                END
+Black-capped chickadee                Atricapillus         Poecile            Paridae             Passeriformes       Aves               Chordata            Animalia
+Tufted titmouse                       Bicolor              Baeolophus         Paridae             Passeriformes       Aves               Chordata            Animalia
+`;

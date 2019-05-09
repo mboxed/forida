@@ -56,11 +56,11 @@ RIVEN.create = (append = true) => {
     Ø('credits').create({ x: 21, y: 8 }, lib.Dom, 'div', `
       <a target='_blank' href="https://twitter.com/mboxxed" class="icon twitter external"></a>
       <a target='_blank' href="https://github.com/mboxed" class="icon github external"></a>      
-      <a target='_blank' href="" class="icon merveilles external"></a>
+      <a target='_blank' href="https://merveilles.town/@m" class="icon merveilles external"></a>
       <a target='_blank' href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="icon cc"></a>
       <a data-goto='m' href='#m'>M</a> © ${new Arvelie('19I14').toString(true)}—${arvelie()}
       <center>${'About'.toLink('BY-NC-SA 4.0')} <span style="color:#ccc"'>${neralie()}</span></center>
-      <a target='_blank' href="https://mboxed.github.io" class="icon hundredrabbits"></a><hr>
+      <a target='_blank' href="https://mboxed.github.io" class="icon m"></a><hr>
     `)
   ])
 

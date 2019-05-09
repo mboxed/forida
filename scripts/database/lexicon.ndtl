@@ -7,6 +7,8 @@ HOME
   BODY
     & {(link "Forida")}: to grow.
     & The ultimate goal of {(bold "Forida")} is to ensure that my personal, spiritual, and intellectual growth is tracked beautifully and easily.
+    & Forida is powered by {(link "Oscean")}, a beautiful flat-file wiki engine. It also uses {(link "Horaire")}, a timekeeping system.
+    & Both were developed by the talented {(link "https://xxiivv.com" "Devine Lu Linvega")}.
     λ (wrap (echo (template (match (table "lexicon") (uniq (attribute (table "horaire") "term"))) SPAN)) "ul" "tidy col3")
 
 RANDOM
@@ -29,7 +31,7 @@ AUDIO
 VISUAL
   UNDE : Home
   TAGS : portal
-  BREF : The {(link "Visual")} hosts design and interaction projects.
+  BREF : The {(link "Visual")} portal hosts design and interaction projects.
   ICON : M75,210 L75,210 L225,210 M135.5,55 L135.5,55 L60.5,185 M239.5,185 L239.5,185 L164.5,55
   BODY
     & Welcome to the {(bold "Visual Portal")}.
@@ -39,44 +41,18 @@ RESEARCH
   UNDE : Home
   TAGS : portal
   ICON : M60,240 a30,-30 0 0,1 30,-30 l150,0 M90,195 a30,-30 0 0,1 30,-30 l90,0 M120,150 a30,-30 0 0,1 30,-30 l30,0 M195,120 l45,0 M225,165 l15,0 M150,105 a30,-30 0 0,1 30,-30 l60,0
-  BREF : The {(link "Research")} hosts philosophy and linguistics projects.
+  BREF : The {(link "Research")} portal hosts philosophy and linguistics projects.
   BODY
     & Welcome to the {(bold "Research Portal")}.
     λ (echo (template :children INDEX))
 
-BENCHMARK
-  UNDE : Notebook
-  BREF : The Benchmark testing tool.
+PHYSICAL
+  UNDE : Home
+  TAGS : Portal
+  BREF : The {(link "Physical")} portal hosts snapshots of physical and spiritual fitness.
   BODY
-    * Table
-    | normal
-    | {(link "Home")}
-    | {(link "Home" "local")}
-    | {(link "https://github.com/")}
-    | {(link "https://github.com/" "external")}
-    | {(bold "bold")}
-    | {(ital "italic")}
-    | {(bold (link "Home" "bold link"))}
-    * List
-    - normal
-    - {(link "Home")}
-    - {(link "Home" "local")}
-    - {(link "https://github.com/")}
-    - {(link "https://github.com/" "external")}
-    - {(bold "bold")}
-    - {(ital "italic")}
-    - {(bold (link "Home" "bold link"))}
-    * Paragraph
-    & normal<br />{(link "Home")}<br />{(link "Home" "local")}<br />{(link "https://github.com/")}<br />{(link "https://github.com/" "external")}<br />{(bold "bold")}<br />{(ital "italic")}<br />{(bold (link "Home" "bold link"))}
-    * Code
-    # normal
-    # {(link "Home")}
-    # {(link "Home" "local")}
-    # {(link "https://github.com/")}
-    # {(link "https://github.com/" "external")}
-    # {(bold "bold")}
-    # {(ital "italic")}
-    # {(bold (link "Home" "bold link"))}
+    & Welcome to the {(bold "Physical Portal")}.
+    λ (echo (template :children INDEX))
 
 TRACKER
   UNDE : Horaire
@@ -129,10 +105,9 @@ ABOUT
     λ (echo :children)
     @ Consider a future device, a sort of mechanized private library in which an individual stores all his books, records, and communications, and which may be consulted with exceeding speed and flexibility. It is an enlarged intimate supplement to his memory. | As We May Think | Vannevar Bush | https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/
   LINK
-    Source Files : https://github.com/XXIIVV/Oscean
+    Source Files : https://github.com/mboxed/forida
+    Original Project : https://github.com/XXIIVV/Oscean
     RSS Feed : https://mboxed.github.io/forida/links/rss.xml
-    RSS Validation : https://validator.w3.org/feed/check.cgi?url=https%3A//mboxed.github.io/forida/links/rss.xml
-    ActivityPub : https://bots.tinysubversions.com/u/neauoire/
     Static Site : https://mboxed.github.io/forida/static.html
     Riven Graph : https://mboxed.github.io/forida/riven.html
 
@@ -156,8 +131,10 @@ HORAIRE
   BREF : {(link "Horaire")} is a {(bold "time-tracking tool")}.
   ICON : M60,60 L60,60 L240,60 L240,240 L60,240 Z M60,120 L60,120 L240,120 M120,120 L120,120 L120,240 M120,180 L120,180 L240,180 M180,180 L180,180 L180,240
   BODY
-    & Daily productivity logs are recorded at the {(link "Routine" "end of each day")}, adding {(bold "valuable data")} to projects.
-    & {(bold "Horaire")} is the time-tracking engine behind the {(link "Oscean")} wiki engine, designed to record and host human-readable {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/database/horaire.tbtl" "daily logs")} that can be easily parsed into {(link "Tracker" "infographics")}. A log entry contains 3 values, effectively positioning the entry in a 3 dimensional graph.
+    & Daily productivity logs are recorded at the end of each day, adding {(bold "valuable data")} to projects.
+    & {(bold "Horaire")} is the time-tracking engine behind the {(link "Oscean")} wiki engine, designed to record and host human-readable {(link "https://github.com/XXIIVV/Oscean/blob/master/scripts/database/horaire.tbtl" "daily logs")} that can be easily parsed into {(link "Tracker" "infographics")}. 
+    & Horaire was designed, and continues to be designed, by he talented {(link "https://xxiivv.com" "Devine Lu Linvega")}. The following breakdown is his own:
+    & A log entry contains 3 values, effectively positioning the entry in a 3 dimensional graph.
     - The {(bold "Sector")}({(ital "Sh")}), either {(link "Audio")}, {(link "Visual")}, {(link "Research")}, or {{link "Physical"}}, is the general sector of the task.
     - The {(bold "Concrete Hour")}({(ital "Ch")}) represents a value of concrete output, or index of progress toward the release of a project. It is also a vague indicator of a log's task type ranging from an introverted task, to an extraverted one.
     - The {(bold "Focus Hour")}({(ital "Fh")}) is an index of attention for the day's task — where 1 indicates that no time was invested in the task, and 9 indicates that all available time was invested in the task.
@@ -173,7 +150,7 @@ HORAIRE
     | 17 | {(task 17)} | 27 | {(task 27)} | 37 | {(task 37)} | 47 | {(task 47)}
     | 18 | {(task 18)} | 28 | {(task 28)} | 38 | {(task 38)} | 48 | {(task 48)}
     | 19 | {(task 19)} | 29 | {(task 29)} | 39 | {(task 39)} | 49 | {(task 49)}
-    & You can learn more about the {(link "Oscean" "related tools")}, and {(link "About" "related projects")}, to the entire {(link "Nataniev")} ecosystem. For additional questions, contact {(link "Devine Lu Linvega")}
+    & More info about {(link "Oscean" "related tools")}, and {(link "About" "related projects")}.
     @ <b>Effectiveness</b>, is doing the right thing.<br><b>Efficiency</b>, is doing it the right way.
   LINK
     View Database : https://github.com/XXIIVV/Oscean/blob/master/scripts/database/horaire.tbtl
@@ -212,6 +189,7 @@ OSCEAN
   BODY
     & {(bold "Oscean")} is a fully static publishing platform created to work in the P2P space.
     & This wiki engine has grown into a collection of tools, including the serverless flow-based framework {(link "Riven")}, and the database formats {(link "Indental")} & {(link "Tablatal")}. The main templating and inline-scripting language is a flavor of {(link "https://en.wikipedia.org/wiki/Lisp_(programming_language)" "LISP")}, called {(link "Heol")}.
+    & Oscean was and continues to be developed by the talented {(link "https://xxiivv.com" "Devine Lu Linvega")}. The following explanation is his own:
     & The following {(bold "example")} shows the content of an {(link "Indental")} file, with a body templated in {(link "Runic")}, which includes a paragraph with a bold link declared in {(link "Heol")}.
     # <comment># lexicon.ndtl</comment>
     # HOME
@@ -312,4 +290,16 @@ TAXON
     & Welcome to Taxon.
     & There are currently {(count (table "taxon"))} entries:
     λ (echo (table "taxon"))
-    `
+
+ORCA
+  UNDE : Audio
+  BREF : {(link "Orca")} is a livecoding tool developed by the talented {(link "https://xxiivv.com" "Devine Lu Linvega")}.
+  BODY
+    & I do a little bit of audio experiemntation, and most of it is currently in Orca, with Pilot as a synth.
+
+EXERCISE
+  UNDE : Physical
+  BREF : {(link "Exercise")} is essential to physical and spiritual wellbeing.
+  BODY
+    &  I'm hoping to get into a better routine with fitness, and plan to catalogue my experiences and techniques here.
+  `

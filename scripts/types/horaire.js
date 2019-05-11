@@ -16,7 +16,10 @@ function Horaire (logs) {
     h.sectors[log.sector] = h.sectors[log.sector] ? h.sectors[log.sector] + log.fh : log.fh
   }
 
-  const balance = (1 - ((Math.abs(3.3333 - (h.sectors.audio / logs.length)) + Math.abs(3.3333 - h.sectors.visual / logs.length) + Math.abs(3.3333 - h.sectors.research / logs.length)) / 13.3333)) * 100
+  const balance = (1 - ((Math.abs(3.3333 - (h.sectors.audio / logs.length)) + 
+                        Math.abs(3.3333 - h.sectors.visual / logs.length) + 
+                        Math.abs(3.3333 - h.sectors.research / logs.length) +
+                        Math.abs(3.3333 - h.sectors.physical / logs.length)) / 16.6666)) * 100
 
   return {
     range: range,

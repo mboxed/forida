@@ -26,7 +26,7 @@ function BarViz (logs) {
   this.draw = function () {
     const segments = parse(this.logs)
     const cell = 13
-    const mod = 0.18
+    const mod = 4
     return Object.keys(segments).reduce((acc, val, id) => {
       const seg = segments[val]
       const x = parseInt(id) * (cell + 1)

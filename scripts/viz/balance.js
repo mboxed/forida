@@ -58,10 +58,10 @@ function BalanceViz (logs) {
       const h_research = parseInt(100 * bal.research)
       const h_visual = parseInt(100 * bal.visual)
       const h_audio = height - h_visual - h_research - h_physical
-      html += `<rect class='research' x='${x}' y='${y}' width='${cell}' height='${clamp(h_physical, 0)}' rx="2" ry="2"></rect>`
-      html += `<rect class='research' x='${x}' y='${h_physical + 1}' width='${cell}' height='${clamp(h_research, 0)}' rx="2" ry="2"></rect>`
-      html += `<rect class='visual' x='${x}' y='${h_physical + h_research + 2}' width='${cell}' height='${clamp(h_visual, 0)}' rx="2" ry="2"></rect>`
-      html += `<rect class='audio' x='${x}' y='${h_physical + h_research + h_visual + 3}' width='${cell}' height='${clamp(h_audio, 0)}' rx="2" ry="2"></rect>`
+      html += `<rect class='physical' x='${x}' y='${y}' width='${cell}' height='${clamp(h_physical, 0, 95)}' rx="2" ry="2"></rect>`
+      html += `<rect class='research' x='${x}' y='${h_physical}' width='${cell}' height='${clamp(h_research, 0, 95)}' rx="2" ry="2"></rect>`
+      html += `<rect class='visual' x='${x}' y='${h_physical + h_research}' width='${cell}' height='${clamp(h_visual, 0, 95)}' rx="2" ry="2"></rect>`
+      html += `<rect class='audio' x='${x}' y='${h_physical + h_research + h_visual}' width='${cell}' height='${clamp(h_audio, 0, 95)}' rx="2" ry="2"></rect>`
       day -= 1
     }
 

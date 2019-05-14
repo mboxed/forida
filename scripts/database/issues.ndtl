@@ -6,4 +6,11 @@ FORIDA
 ORCA
   CONTENT
     Learn the suite
+BUBBLE
+  FEATURES
+    Communication (message sending)
+    SASL Authentication
+  UI
+    Prettify message handling
+    Work on overall application layout
 `

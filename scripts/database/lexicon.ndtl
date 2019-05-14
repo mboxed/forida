@@ -302,4 +302,15 @@ EXERCISE
   BREF : {(link "Exercise")} is essential to physical and spiritual wellbeing.
   BODY
     &  I'm hoping to get into a better routine with fitness, and plan to catalogue my experiences and techniques here.
+
+BUBBLE
+  UNDE : Software
+  BREF : {(link "Bubble")} is a beautiful, in-progress IRC client.
+  ICON : M180,60 A45,45 0 0,0 135,105 A45,45 0 0,0 180,150 A45,45 0 0,0 225,105 A45,45 0 0,0 180,60 M90,120 A30,30 0 0,0 60,150 A30,30 0 0,0 90,180 A30,30 0 0,0 120,150 A30,30 0 0,0 90,120 M180,180 A30,30 0 0,0 150,210 A30,30 0 0,0 180,240 A30,30 0 0,0 210,210 A30,30 0 0,0 180,180 M105,210 A15,15 0 0,0 90,225 A15,15 0 0,0 105,240 A15,15 0 0,0 120,225 A15,15 0 0,0 105,210 
+  BODY
+    & {(bold "Bubble")} is an IRC client based heavily on the Hundred Rabbits ecosystem, including its theming structure.
+    & It takes heavy design inspiration (and some framework code) from their beautiful {(link "https://wiki.xxiivv.com/#left" "Left")} editor.
+    & It's currently a work in progress, but please check out the {(link "https://github.com/mboxed/bubble" "GitHub")} page to keep track of development as it progresses.
+  LINK
+    Source : https://github.com/mboxed/bubble
   `

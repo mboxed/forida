@@ -1,5 +1,8 @@
 DATABASE.horaire = `
 DATE  CODE PICT TERM                 NAME                                       END
+19J08 -345      Bubble
+19J07 -346      Bubble
+19J06 +364      Bubble               Began work on Bubble
 19J04 -121      Orca
 19J03 +373      Forida               Updated site appearance
 19J03 -491      Exercise
